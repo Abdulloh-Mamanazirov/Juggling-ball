@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to bottom, white 85%, green 87%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+/*
+.circle{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-image: conic-gradient(#0f0, #00f, #f00);
+
+    animation: round 1s ease-in-out 0s 10 alternate both;
+    animation-name: round;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay:0s;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+
+}
+
+@keyframes round {
+    from{
+        transform: rotate(540deg);
+    }
+    to{
+        transform: rotate(0);
+        transform: scale(.4);
+    }
+}*/
+
+.football {
+  .person {
+    position: relative;
+    img {
+      width: 150px;
+      animation: head 0.7s linear infinite alternate both;
+    }
+    @keyframes head {
+      to {
+        transform: translateX(-9px);
+      }
+    }
+    .body {
+      z-index: 999;
+      position: absolute;
+      left: -81px;
+      top: 135px;
+      height: 300px;
+      width: 330px;
+      background-color: #000;
+      clip-path: polygon(
+        42% 0,
+        61% 1%,
+        66% 30%,
+        65% 58%,
+        58.5% 88%,
+        29% 87%,
+        27% 59%,
+        31% 30%
+      );
+      animation: body 0.7s linear infinite alternate both;
+    }
+    @keyframes body {
+      to {
+        transform: rotate(-3deg);
+      }
+    }
+    .hand1 {
+      z-index: 3;
+      position: absolute;
+      right: 0;
+      width: 300px;
+      height: 200px;
+      background-color: #000;
+      clip-path: polygon(
+        76% 17%,
+        65% 28%,
+        47% 39%,
+        31% 47%,
+        19% 51%,
+        6% 55%,
+        1% 62%,
+        7% 68%,
+        18% 68%,
+        30% 63%,
+        43% 59%,
+        54% 56%,
+        67% 50%,
+        77% 42%,
+        87% 32%,
+        91% 26%
+      );
+      animation: hand1 0.7s linear infinite alternate both;
+    }
+    @keyframes hand1 {
+      to {
+        transform: rotate(5deg);
+      }
+    }
+    .hand2 {
+      z-index: 1;
+      position: absolute;
+      right: 0px;
+      top: 200px;
+      transform: rotate(-35deg);
+      width: 300px;
+      height: 200px;
+      background-color: #333;
+      clip-path: polygon(
+        87% 19%,
+        65% 28%,
+        45% 29%,
+        27% 30%,
+        13% 28%,
+        4% 30%,
+        6% 39%,
+        17% 41%,
+        30% 45%,
+        41% 44%,
+        55% 45%,
+        67% 45%,
+        79% 43%,
+        88% 39%,
+        94% 37%,
+        96% 33%
+      );
+      animation: leg 0.7s linear infinite alternate both;
+    }
+    .leg1 {
+      position: absolute;
+      top: 393px;
+      left: -125px;
+      height: 300px;
+      width: 400px;
+      background-color: #000;
+      clip-path: polygon(
+        35% 0%,
+        37% 34%,
+        36% 42%,
+        37% 46%,
+        38% 86%,
+        27% 88%,
+        25% 94%,
+        52% 93%,
+        52% 84%,
+        52% 71%,
+        52% 60%,
+        52% 52%,
+        53% 41%,
+        55% 31%,
+        58% 15%,
+        61% -10%
+      );
+    }
+    .leg2 {
+      position: absolute;
+      top: 353px;
+      left: -185px;
+      height: 350px;
+      width: 350px;
+      background-color: #000;
+      clip-path: polygon(
+        76% 5%,
+        56% 12%,
+        38% 20%,
+        33% 31%,
+        28% 42%,
+        23% 55%,
+        11% 57%,
+        5% 62%,
+        8% 67%,
+        25% 66%,
+        34% 66%,
+        37% 60%,
+        45% 44%,
+        49% 35%,
+        66% 30%,
+        69% 26%,
+        81% 24%,
+        85% 9%
+      );
+
+      animation: leg 0.7s linear infinite alternate both;
+    }
+    @keyframes leg {
+      to {
+        transform: rotate(-10deg);
+      }
+    }
+  }
+  .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 4;
+    position: relative;
+    right: 200px;
+    top: 320px;
+
+    animation: ball 0.7s ease-out infinite alternate both;
+  }
+  @keyframes ball {
+    to {
+      transform: rotate(360deg);
+      top: 150px;
+    }
+  }
+}
+/* body{
+    background-color: rgb(0, 174, 255);
+}
+
+.shape{
+    width: 180px;
+    height: 300px;
+    border: 3px solid white;
+    border-radius: 100px;
+    position: relative;
+}
+.shape::before{
+    content: "";
+    position: absolute;
+    left: 42%;
+    top: 40px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+
+    animation: animation 1s linear infinite  both;
+}
+
+@keyframes animation {
+    100%{
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    60%{
+        opacity: 0.5;
+        // transform: translateY(200px);
+        
+    }
+    0%{
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}*/
